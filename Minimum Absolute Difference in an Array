@@ -1,0 +1,15 @@
+#!/bin/python
+
+import sys
+l = []
+def minimumAbsoluteDifference(n, arr):
+    # Complete this function
+    new = sorted(arr)
+    return min(abs(x-y) for x,y in zip(new,new[1:]))            
+            
+
+if __name__ == "__main__":
+    n = int(raw_input().strip())
+    arr = map(int, raw_input().strip().split(' '))
+    result = minimumAbsoluteDifference(n, arr)
+    print result
