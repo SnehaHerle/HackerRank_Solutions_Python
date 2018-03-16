@@ -1,0 +1,26 @@
+#!/bin/python
+
+import sys
+
+def birthdayCakeCandles(n, ar):
+    # Complete this function
+    large = ar[0]
+    i = 1
+    while(i<n):
+        if(ar[i]>=large):
+            large = ar[i]
+        i += 1
+    count = 0
+    i = 0
+    
+    while(i<n):
+
+        if(ar[i] == large):
+            count +=1
+        i +=1
+    return count
+
+n = int(raw_input().strip())
+ar = map(int, raw_input().strip().split(' '))
+result = birthdayCakeCandles(n, ar)
+print(result)
