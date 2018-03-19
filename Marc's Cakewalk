@@ -1,0 +1,20 @@
+#!/bin/python
+
+import sys
+
+def marcsCakewalk(calorie):
+    # Complete this function
+    calorie.sort(reverse = True)
+    s = 0
+    m = 0
+    for i in calorie:
+        s = s + (2**m)*i
+        m += 1
+    return s
+    
+    
+if __name__ == "__main__":
+    n = int(raw_input().strip())
+    calorie = map(int, raw_input().strip().split(' '))
+    result = marcsCakewalk(calorie)
+    print result
